@@ -11,6 +11,7 @@
     <div id="loading-screen">
         <div class="loading-content">
             <img src="https://i.postimg.cc/G2nSwKWx/loading-logo.webp" alt="Carregando" class="loading-logo">
+            
             <div class="progress-bar-container">
                 <div id="progress-bar" class="progress-bar"></div>
             </div>
@@ -25,20 +26,22 @@
             
             <button id="info-button" class="info-btn">i</button>
             
+            <div class="reels-area">
+                <div class="reels-grid">
                     <div class="reel">
                         <img src="https://i.postimg.cc/LsW2zcgG/amigo1.png" id="img-0-0" class="symbol">
                         <img src="https://i.postimg.cc/RhyS4j4n/sua-foto.png" id="img-1-0" class="symbol">
-                        <img src="https://i.postimg.cc/BnG3p568/amigo4.png" id="img-2-0" class="symbol">
+                        <img src="https://i.postimg.cc/LsW2zcgG/amigo1.png" id="img-2-0" class="symbol">
                     </div>
                     <div class="reel">
-                        <img src="https://i.postimg.cc/FRKNc9Kz/amigo-especial.png" id="img-0-1" class="symbol">
+                        <img src="https://i.postimg.cc/LsW2zcgG/amigo1.png" id="img-0-1" class="symbol">
                         <img src="https://i.postimg.cc/RhyS4j4n/sua-foto.png" id="img-1-1" class="symbol">
                         <img src="https://i.postimg.cc/LsW2zcgG/amigo1.png" id="img-2-1" class="symbol">
                     </div>
                     <div class="reel">
-                        <img src="https://i.postimg.cc/BnG3p568/amigo4.png" id="img-0-2" class="symbol">
+                        <img src="https://i.postimg.cc/LsW2zcgG/amigo1.png" id="img-0-2" class="symbol">
                         <img src="https://i.postimg.cc/RhyS4j4n/sua-foto.png" id="img-1-2" class="symbol">
-                        <img src="https://i.postimg.cc/76CPdHyb/amigo2.png" id="img-2-2" class="symbol">
+                        <img src="https://i.postimg.cc/LsW2zcgG/amigo1.png" id="img-2-2" class="symbol">
                     </div>
                 </div>
             </div>
@@ -47,7 +50,7 @@
                 <div class="display-boxes">
                     <div class="box">
                         <span>Saldo</span>
-                        <span id="balance-display">R$ 1000,00</span>
+                        <span id="balance-display">R$ 3409,27</span>
                     </div>
                     <div class="box">
                         <span>Aposta</span>
@@ -61,13 +64,16 @@
 
                 <div class="buttons-row">
                     <button id="mute-button" class="icon-btn mute-btn">
-                        <span>&#x1F514;</span> </button>
+                        <span>&#x1F514;</span>
+                    </button>
                     <button id="bet-down" class="bet-btn">-</button>
                     <button id="spin-button" class="spin-btn">
-                        <span id="spin-label">&#x21BB;</span> </button>
+                        <span id="spin-label">&#x21BB;</span>
+                    </button>
                     <button id="bet-up" class="bet-btn">+</button>
                     <button id="auto-button" class="icon-btn auto-btn-round">
-                        <span>&#x1F504;</span> </button>
+                        <span>&#x1F504;</span>
+                    </button>
                 </div>
             </div>
 
@@ -88,19 +94,16 @@
                 <div class="auto-modal-content info-modal-content">
                     <h3>Como Funciona</h3>
                     <p>Acerte 3 símbolos iguais em qualquer uma das 5 linhas de pagamento (horizontais ou diagonais) para ganhar!</p>
-                    
                     <div id="info-paytable-content" class="paytable-container">
                         </div>
-                    
                     <button id="info-close-btn" class="auto-close-btn">Fechar</button>
                 </div>
             </div>
 
-        </div> </div> <audio id="audio-bgm" src="sons/fundo.mp3" loop></audio>
-    <audio id="audio-spin" src="sons/giro.mp3"></audio>
-    <audio id="audio-win" src="sons/ganho.mp3"></audio>
+        </div> </div> <audio id="audio-bgm" src="URL_DO_SOM_FUNDO_AQUI" loop></audio>
+    <audio id="audio-spin" src="URL_DO_SOM_GIRO_AQUI"></audio>
+    <audio id="audio-win" src="URL_DO_SOM_GANHO_AQUI"></audio>
 
     <script src="script.js"></script>
 </body>
-
 </html>
