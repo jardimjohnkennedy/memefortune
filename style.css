@@ -29,6 +29,7 @@ body, html {
     width: 100%;
     height: 100%;
     z-index: 200;
+    /* ATUALIZADO */
     background-image: url('https://i.postimg.cc/zfb91V3P/loading-bg.png');
     background-size: cover;
     background-position: center;
@@ -88,7 +89,8 @@ body, html {
 .game-container {
     width: 360px;
     height: 640px;
-    background-image: url(https://i.postimg.cc/xdXST6pG/seu-fundo.png');
+    /* ATUALIZADO */
+    background-image: url('https://i.postimg.cc/xdXST6pG/seu-fundo.png');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
@@ -101,7 +103,7 @@ body, html {
     position: relative;
 }
 
-/* --- NOVO BOTÃO DE INFORMAÇÃO "i" --- */
+/* --- BOTÃO DE INFORMAÇÃO "i" --- */
 .info-btn {
     position: absolute;
     top: 15px;
@@ -116,7 +118,7 @@ body, html {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    line-height: 26px; /* Ajuste para centralizar o 'i' */
+    line-height: 26px;
     text-align: center;
 }
 
@@ -128,7 +130,6 @@ body, html {
     height: 310px;
     z-index: 1;
 }
-/* ... (reels-grid, reel, symbol, etc... iguais) ... */
 .reels-grid {
     display: flex;
     justify-content: center;
@@ -316,10 +317,10 @@ body, html {
     cursor: pointer;
 }
 
-/* --- NOVOS ESTILOS PARA O MODAL DE INFO (PAYTABLE) --- */
+/* --- ESTILOS PARA O MODAL DE INFO (PAYTABLE) --- */
 .info-modal-content {
     text-align: left;
-    max-height: 80%; /* Permite rolar se tiver muito conteúdo */
+    max-height: 80%;
     overflow-y: auto;
 }
 .info-modal-content p {
@@ -342,7 +343,7 @@ body, html {
     border-radius: 5px;
 }
 .paytable-symbol {
-    width: 50px; /* Tamanho menor para a lista */
+    width: 50px;
     height: 50px;
     border-radius: 5px;
     border: 1px solid #fff;
@@ -356,5 +357,4 @@ body, html {
     text-align: left;
     margin: 2px 0 0 0;
     color: #ccc;
-
 }
