@@ -1,7 +1,7 @@
 // --- ⚠️ ÁREA DE CONFIGURAÇÃO DAS FOTOS ⚠️ ---
-const NOME_DA_SUA_FOTO = 'sua-foto.png';
+const NOME_DA_SUA_FOTO = 'https://i.postimg.cc/RhyS4j4n/sua-foto.png';
 const FOTOS_AMIGOS = [
-    'amigo1.png', 'amigo2.png', 'amigo3.png', 'amigo4.png', 'amigo-especial.png'
+    'https://i.postimg.cc/LsW2zcgG/amigo1.png', 'amigo2.png', 'amigo3.png', 'amigo4.png', 'amigo-especial.png'
 ];
 const TODOS_OS_SIMBOLOS = [
     NOME_DA_SUA_FOTO,
@@ -9,22 +9,22 @@ const TODOS_OS_SIMBOLOS = [
 ];
 const PREMIOS = {
     [NOME_DA_SUA_FOTO]: 50,
-    'amigo1.png': 5,
-    'amigo2.png': 5,
-    'amigo3.png': 10,
-    'amigo4.png': 10,
-    'amigo-especial.png': 25
+    'https://i.postimg.cc/LsW2zcgG/amigo1.png': 5,
+    'https://i.postimg.cc/76CPdHyb/amigo2.png': 5,
+    'https://i.postimg.cc/qBhgZLkL/amigo3.png': 10,
+    'https://i.postimg.cc/BnG3p568/amigo4.png': 10,
+    'https://i.postimg.cc/FRKNc9Kz/amigo-especial.png': 25
 };
 
 // --- (NOVA CONFIGURAÇÃO DE NOMES) ---
 // Define os nomes que aparecerão na tela de Informações
 const NOMES_PERSONAGENS = {
     [NOME_DA_SUA_FOTO]: "King (Wild)",
-    'amigo1.png': "Corintiano",
-    'amigo2.png': "Jogador",
-    'amigo3.png': "Playboy",
-    'amigo4.png': "O Bruxo",
-    'amigo-especial.png': "Joinha"
+    'https://i.postimg.cc/LsW2zcgG/amigo1.png': "Corintiano",
+    'https://i.postimg.cc/76CPdHyb/amigo2.png': "Jogador",
+    'https://i.postimg.cc/qBhgZLkL/amigo3.png': "Playboy",
+    'https://i.postimg.cc/BnG3p568/amigo4.png': "O Bruxo",
+    'https://i.postimg.cc/FRKNc9Kz/amigo-especial.png': "Joinha"
 };
 // --------------------------------------------------
 
@@ -353,4 +353,5 @@ updateDisplays(); // Atualiza visores
 populatePaytable(); // Preenche a tabela de prêmios com os novos nomes
 allAudio.forEach(audio => { // Seta o estado mudo inicial
     audio.muted = isMuted;
+
 });
