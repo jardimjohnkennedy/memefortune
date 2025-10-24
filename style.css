@@ -10,7 +10,7 @@
     }
 }
 
-/* --- ESTILOS GLOBAIS --- */
+/* --- ESTILOS GLOBAIS (Mobile First) --- */
 body, html {
     height: 100%;
     margin: 0;
@@ -20,8 +20,7 @@ body, html {
     overflow: hidden;
 }
 
-/* --- ESTILOS DE CARREGAMENTO ---
-*/
+/* --- ESTILOS DE CARREGAMENTO (Mobile First) --- */
 #loading-screen {
     position: fixed;
     top: 0;
@@ -29,7 +28,6 @@ body, html {
     width: 100%;
     height: 100%;
     z-index: 200;
-    /* ATUALIZADO */
     background-image: url('https://i.postimg.cc/zfb91V3P/loading-bg.png');
     background-size: cover;
     background-position: center;
@@ -44,17 +42,17 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 120px; 
+    margin-bottom: 18.75vh; /* 120px / 640px */
 }
 .loading-logo {
-    width: 150px;
+    width: 41.6vw; /* 150px / 360px */
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 4.6vh; /* 30px / 640px */
 }
 .progress-bar-container {
     width: 80%;
-    max-width: 300px;
-    height: 15px;
+    max-width: 83.3vw; /* 300px / 360px */
+    height: 2.3vh; /* 15px / 640px */
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #ffd700;
     border-radius: 10px;
@@ -69,33 +67,31 @@ body, html {
 }
 .loading-footer {
     position: absolute;
-    bottom: 20px;
-    font-size: 12px;
+    bottom: 3.1vh; /* 20px / 640px */
+    font-size: 1.8vh; /* 12px / 640px */
     color: rgba(255, 255, 255, 0.7);
 }
 
 
-/* --- WRAPPER DO JOGO ---
-*/
+/* --- WRAPPER DO JOGO (Mobile First) --- */
 #game-wrapper {
     display: none; 
     width: 100%;
     height: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Centraliza no PC */
 }
 
-/* --- ESTILOS DO JOGO --- */
+/* --- ESTILOS DO JOGO (Mobile First) --- */
 .game-container {
-    width: 360px;
-    height: 640px;
-    /* ATUALIZADO */
+    width: 100%;  /* Tela cheia no celular */
+    height: 100%; /* Tela cheia no celular */
     background-image: url('https://i.postimg.cc/xdXST6pG/seu-fundo.png');
     background-size: cover;
     background-position: center;
-    border-radius: 20px;
-    border: 4px solid #ffd700;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -103,52 +99,54 @@ body, html {
     position: relative;
 }
 
-/* --- BOTÃO DE INFORMAÇÃO "i" --- */
+/* --- BOTÃO "i" (Mobile First) --- */
 .info-btn {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 2.3vh; /* 15px / 640px */
+    left: 4.1vw; /* 15px / 360px */
     z-index: 10;
-    width: 30px;
-    height: 30px;
+    width: 8.3vw; /* 30px / 360px */
+    height: 8.3vw; /* 30px / 360px */
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.6);
     border: 2px solid #ffd700;
     color: #ffd700;
-    font-size: 18px;
+    font-size: 5vw; /* 18px / 360px */
     font-weight: bold;
     cursor: pointer;
-    line-height: 26px;
+    line-height: 8.3vw; /* Centraliza o 'i' */
     text-align: center;
+    padding: 0;
 }
 
+/* --- ROLOS (Mobile First) --- */
 .reels-area {
     position: absolute;
-    top: 90px;
-    left: 20px;
-    right: 20px;
-    height: 310px;
+    top: 14vh; /* 90px / 640px */
+    left: 5.55vw; /* 20px / 360px */
+    right: 5.55vw; /* 20px / 360px */
+    height: 48.4vh; /* 310px / 640px */
     z-index: 1;
 }
 .reels-grid {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 2.77vw; /* 10px / 360px */
     width: 100%;
     height: 100%;
 }
 .reel {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 90px;
+    gap: 2.77vw; /* 10px / 360px */
+    width: 25vw; /* 90px / 360px */
 }
 .symbol {
-    width: 90px;
-    height: 90px;
+    width: 25vw; /* 90px / 360px */
+    height: 25vw; /* Mantém quadrado */
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    border: 2px solid #fff;
+    border-radius: 2.7vw; /* 10px / 360px */
+    border: 0.55vw solid #fff; /* 2px / 360px */
     object-fit: cover;
     transition: filter 0.05s, transform 0.05s;
 }
@@ -162,57 +160,57 @@ body, html {
 }
 
 
-/* --- PAINEL DE CONTROLE --- */
+/* --- PAINEL DE CONTROLE (Mobile First) --- */
 .controls-panel {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px;
+    padding: 2.77vw; /* 10px / 360px */
     border-top: 2px solid #ffd700;
     z-index: 2;
 }
 .display-boxes {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 10px;
+    margin-bottom: 2.77vw; /* 10px / 360px */
 }
 .box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 14px;
+    font-size: 2.1vh; /* 14px / 640px */
 }
 .box span:first-child {
     font-weight: bold;
     color: #ffc;
-    font-size: 12px;
+    font-size: 1.8vh; /* 12px / 640px */
 }
 .buttons-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px; 
-    margin-bottom: 10px;
+    gap: 4.16vw; /* 15px / 360px */
+    margin-bottom: 1.5vh; /* 10px / 640px */
 }
 .spin-btn {
-    width: 70px;
-    height: 70px;
+    width: 19.4vw; /* 70px / 360px */
+    height: 19.4vw;
     border-radius: 50%;
     background-color: #00a000;
-    border: 4px solid #fff;
-    font-size: 30px;
+    border: 1.1vw solid #fff; /* 4px / 360px */
+    font-size: 8.3vw; /* 30px / 360px */
     font-weight: bold;
     color: white;
     cursor: pointer;
-    box-shadow: 0 5px 0 #006000;
+    box-shadow: 0 0.7vh 0 #006000; /* 5px / 640px */
     transition: all 0.1s;
     line-height: 1;
 }
 .spin-btn:active {
-    transform: translateY(3px);
-    box-shadow: 0 2px 0 #006000;
+    transform: translateY(0.3vh); /* 2px */
+    box-shadow: 0 0.3vh 0 #006000;
 }
 .spin-btn:disabled {
     background-color: #555;
-    box-shadow: 0 5px 0 #333;
+    box-shadow: 0 0.7vh 0 #333;
     cursor: not-allowed;
 }
 .spin-btn span {
@@ -220,23 +218,23 @@ body, html {
     line-height: 1;
 }
 .bet-btn {
-    width: 50px;
-    height: 50px;
+    width: 13.8vw; /* 50px / 360px */
+    height: 13.8vw;
     border-radius: 50%;
     background-color: #d00;
-    border: 2px solid #fff;
-    font-size: 30px;
+    border: 0.55vw solid #fff; /* 2px / 360px */
+    font-size: 8.3vw; /* 30px / 360px */
     font-weight: bold;
     color: white;
     cursor: pointer;
 }
 .icon-btn {
-    width: 50px;
-    height: 50px;
+    width: 13.8vw; /* 50px / 360px */
+    height: 13.8vw;
     border-radius: 50%;
     background-color: #444;
-    border: 2px solid #fff;
-    font-size: 24px;
+    border: 0.55vw solid #fff; /* 2px / 360px */
+    font-size: 6.6vw; /* 24px / 360px */
     font-weight: bold;
     color: white;
     cursor: pointer;
@@ -251,11 +249,11 @@ body, html {
 }
 .auto-btn-round.auto-active {
     background-color: #d00;
-    font-size: 20px;
+    font-size: 5.5vw; /* 20px / 360px */
 }
 
 
-/* --- ESTILOS DO MODAL (BASE) --- */
+/* --- ESTILOS DO MODAL (Mobile First) --- */
 .auto-modal-overlay {
     position: absolute;
     top: 0;
@@ -275,30 +273,28 @@ body, html {
     background-color: #222;
     border: 2px solid #ffd700;
     border-radius: 10px;
-    padding: 20px;
+    padding: 5.5vw; /* 20px / 360px */
     width: 80%;
     text-align: center;
     color: white;
 }
 .auto-modal-content h3 {
-    margin: 0 0 15px 0;
-    font-size: 16px;
+    margin: 0 0 2.3vh 0; /* 15px / 640px */
+    font-size: 2.5vh; /* 16px / 640px */
     color: #ffc;
 }
-
-/* --- ESTILOS MODAL AUTO --- */
 .auto-options-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 2.77vw; /* 10px / 360px */
+    margin-bottom: 3.1vh; /* 20px / 640px */
 }
 .auto-option-btn {
     background-color: #444;
     border: 1px solid #777;
     border-radius: 5px;
-    padding: 15px 10px;
-    font-size: 18px;
+    padding: 2.3vh 2.77vw; /* 15px 10px */
+    font-size: 2.8vh; /* 18px / 640px */
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -308,56 +304,209 @@ body, html {
 }
 .auto-close-btn {
     width: 100%;
-    padding: 10px;
+    padding: 1.5vh; /* 10px / 640px */
     background-color: #d00;
     border: none;
     border-radius: 5px;
     color: white;
-    font-size: 16px;
+    font-size: 2.5vh; /* 16px / 640px */
     cursor: pointer;
 }
-
-/* --- ESTILOS PARA O MODAL DE INFO (PAYTABLE) --- */
 .info-modal-content {
     text-align: left;
     max-height: 80%;
     overflow-y: auto;
 }
 .info-modal-content p {
-    font-size: 14px;
-    margin: 0 0 15px 0;
+    font-size: 2.1vh; /* 14px / 640px */
+    margin: 0 0 2.3vh 0; /* 15px / 640px */
     text-align: center;
 }
 .paytable-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 2.77vw; /* 10px / 360px */
+    margin-bottom: 3.1vh; /* 20px / 640px */
 }
 .paytable-row {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 2.77vw; /* 10px / 360px */
     background-color: rgba(0, 0, 0, 0.3);
-    padding: 10px;
+    padding: 2.77vw; /* 10px / 360px */
     border-radius: 5px;
 }
 .paytable-symbol {
-    width: 50px;
-    height: 50px;
+    width: 13.8vw; /* 50px / 360px */
+    height: 13.8vw;
     border-radius: 5px;
     border: 1px solid #fff;
     object-fit: cover;
 }
 .paytable-desc {
-    font-size: 14px;
+    font-size: 2.1vh; /* 14px / 640px */
 }
 .paytable-desc p {
-    font-size: 12px;
+    font-size: 1.8vh; /* 12px / 640px */
     text-align: left;
-    margin: 2px 0 0 0;
+    margin: 0.3vh 0 0 0; /* 2px / 640px */
     color: #ccc;
 }
 
 
+/* ==================================================================
+--- NOVA MEDIA QUERY PARA TELAS LARGAS (PC / TABLET PAISAGEM) ---
+==================================================================
+Afeta telas com mais de 500px de largura E que sejam mais largas do que altas
+*/
 
+@media (min-width: 500px) and (min-aspect-ratio: 1/1) {
+
+    /* Restaura o container para o formato de celular */
+    .game-container {
+        width: 360px;  /* Tamanho fixo */
+        height: 640px; /* Tamanho fixo */
+        
+        /* Restaura a aparência de "simulador" */
+        border: 4px solid #ffd700;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Restaura a barra de loading para px */
+    .loading-content {
+        margin-bottom: 120px; 
+    }
+    .loading-logo {
+        width: 150px;
+        margin-bottom: 30px;
+    }
+    .progress-bar-container {
+        width: 80%;
+        max-width: 300px; /* Reverte de vw para px */
+        height: 15px;
+    }
+    .loading-footer {
+        bottom: 20px;
+        font-size: 12px;
+    }
+
+    /* Restaura o botão "i" para px */
+    .info-btn {
+        top: 15px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        line-height: 26px; /* Ajuste manual */
+    }
+
+    /* Restaura a grade do jogo para px */
+    .reels-area {
+        top: 90px;
+        left: 20px;
+        right: 20px;
+        height: 310px;
+    }
+    .reels-grid {
+        gap: 10px;
+    }
+    .reel {
+        gap: 10px;
+        width: 90px;
+    }
+    .symbol {
+        width: 90px;
+        height: 90px; /* Mantém quadrado */
+        border-radius: 10px;
+        border-width: 2px;
+    }
+
+    /* Restaura o painel de controle para px */
+    .controls-panel {
+        padding: 10px;
+    }
+    .display-boxes {
+        margin-bottom: 10px;
+    }
+    .box {
+        font-size: 14px;
+    }
+    .box span:first-child {
+        font-size: 12px;
+    }
+    .buttons-row {
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+    .spin-btn {
+        width: 70px;
+        height: 70px;
+        border-width: 4px;
+        font-size: 30px;
+        box-shadow: 0 5px 0 #006000;
+    }
+    .spin-btn:active {
+        transform: translateY(2px);
+        box-shadow: 0 3px 0 #006000;
+    }
+    .bet-btn {
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
+        font-size: 30px;
+    }
+    .icon-btn {
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
+        font-size: 24px;
+    }
+    .auto-btn-round.auto-active {
+        font-size: 20px;
+    }
+
+    /* Restaura os modais para px */
+    .auto-modal-content {
+        padding: 20px;
+    }
+    .auto-modal-content h3 {
+        margin: 0 0 15px 0;
+        font-size: 16px;
+    }
+    .auto-options-grid {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .auto-option-btn {
+        padding: 15px 10px;
+        font-size: 18px;
+    }
+    .auto-close-btn {
+        padding: 10px;
+        font-size: 16px;
+    }
+    .info-modal-content p {
+        font-size: 14px;
+        margin: 0 0 15px 0;
+    }
+    .paytable-container {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .paytable-row {
+        gap: 10px;
+        padding: 10px;
+    }
+    .paytable-symbol {
+        width: 50px;
+        height: 50px;
+    }
+    .paytable-desc {
+        font-size: 14px;
+    }
+    .paytable-desc p {
+        font-size: 12px;
+        margin: 2px 0 0 0;
+    }
+}
