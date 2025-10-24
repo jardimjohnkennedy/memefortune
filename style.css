@@ -29,7 +29,7 @@ body, html {
     width: 100%;
     height: 100%;
     z-index: 200;
-    background-image: url('imagens/loading-bg.png');
+    background-image: url('https://i.postimg.cc/zfb91V3P/loading-bg.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -88,7 +88,7 @@ body, html {
 .game-container {
     width: 360px;
     height: 640px;
-    background-image: url('imagens/seu-fundo.png');
+    background-image: url(https://i.postimg.cc/xdXST6pG/seu-fundo.png');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
@@ -356,4 +356,5 @@ body, html {
     text-align: left;
     margin: 2px 0 0 0;
     color: #ccc;
+
 }
