@@ -43,7 +43,7 @@ let balance = 3409.27;
 let currentBet = 20.00;
 let isSpinning = false;
 let autoSpinsRemaining = 0;
-const betLevels = [0.50, 1.00, 2.00, 5.00, 10.00, 20.00, 50.00, 100.00];
+const betLevels = [0.50, 1.00, 2.00, 5.00, 10.00, 20.00, 50.00, 100.00, 200.00, 500.00, 1000.00, 1500.00];
 let currentBetIndex = betLevels.indexOf(currentBet);
 let isAudioInitialized = false; 
 let isMuted = false;
@@ -342,3 +342,4 @@ populatePaytable();
 allAudio.forEach(audio => {
     audio.muted = isMuted;
 });
+
