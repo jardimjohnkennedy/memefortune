@@ -28,7 +28,7 @@ body, html {
     width: 100%;
     height: 100%;
     z-index: 200;
-    background-image: url('https://i.postimg.cc/zfb91V3P/loading-bg.png');
+    background-image: url('https://lh3.googleusercontent.com/d/1RjoC0OhyseyWv_FwZ8UK_HdJgUFGYG49');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -510,3 +510,4 @@ Afeta telas com mais de 500px de largura E que sejam mais largas do que altas
         margin: 2px 0 0 0;
     }
 }
+
